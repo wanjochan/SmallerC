@@ -6,7 +6,11 @@ incdir = $(prefix)/smlrc/include
 CFLAGS = -pipe -Wall -O2
 CFLAGS += -DPATH_PREFIX='"$(prefix)"'
 
-CC = gcc
+#CC = gcc -Iv0100/include
+#CC = cc -Iv0100/include
+#CC=gcc
+#CC = gcc -Iv0100/include -I/usr/include
+CC = gcc -I/usr/include
 
 UNAME_S := $(shell uname -s)
 ifeq ($(UNAME_S),Darwin)

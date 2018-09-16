@@ -1,4 +1,4 @@
-srcdir != readlink -f $(.PARSEDIR)/$(.PARSEFILE) | sed 's@[^/]*$$@v0100@'
+srcdir != readlink $(.PARSEDIR)/$(.PARSEFILE) | sed 's@[^/]*$$@v0100@'
 .PATH: $(srcdir) $(srcdir)/srclib
 PATH := $(.CURDIR):$(PATH)
 .export PATH
